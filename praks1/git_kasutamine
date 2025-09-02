@@ -1,0 +1,14 @@
+root kasutajana:
+installi - apt-get install git
+tavakasutajana:
+esmakordselt:
+
+git config --global user.name "Liis-Mirell Palmiste"
+git config --global user.email liis-mirell.palmiste@voco.ee
+git config --global core.editor nano
+
+mkdir skripimine
+
+cd skriptimine
+
+git init
