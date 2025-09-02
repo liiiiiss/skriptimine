@@ -18,3 +18,7 @@ remote seadistamine:
 git remote add skriptimine git@github.com:liis/skriptimine.git
 
 git remote -v
+
+git remote -v
+
+git add failinimi
