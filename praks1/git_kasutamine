@@ -13,3 +13,8 @@ cd skriptimine
 
 git init
 AAAAAAAAAAAAAAAAA
+
+remote seadistamine:
+git remote add skriptimine git@github.com:liis/skriptimine.git
+
+git remote -v
