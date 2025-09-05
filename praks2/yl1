@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo -n "$kasutajanimeEsimeseTaht"
+echo "Tere, $kasutajanimeEsimenetaht"
+ echo "Tere, $kasutajanimeEsimeneTaht"
+kasutajanimeYlejaanudOsa=´whoami´ | cut -c2-
+echo kasutajanimeYlejaanudOsa
+echo $kasutajanimeYlejaanudOsa
+echo "Tere, $kasutajanimeEsimeneTaht$kasutajanimeYlejaanudOsa!"
+/skriptimine/praks2$ kasutajanimeYlejaanudOsa=´whoami´ | cut -c2-
+
