@@ -1,0 +1,14 @@
+#!/bin/bash
+# Autor: liis
+# Kirjeldus: Skript arvutab busside täituvuse ja üle jäävad reisijad.
+
+echo -n "Sisesta reisijate arv: "
+read reisijad
+echo -n "Sisesta kohtade arv ühes bussis: "
+read kohad
+
+tais_bussid=$(expr $reisijad / $kohad)
+ulejaanud=$(expr $reisijad % $kohad)
+
+echo "Täielikult täidetud busse: $tais_bussid"
+echo "Mahajäänud reisijaid: $ulejaanud"
