@@ -1,0 +1,21 @@
+#!/bin/bash
+# Autor: liis
+# Kirjeldus: Skript kontrollib käsurea argumendina antud täisarvu paarsust. Kui argumendi ei ole või on rohkem kui üks, väljastab teate.
+
+if [ $# -ne 1 ]; then
+    echo "Palun sisesta täpselt üks täisarv käsurea argumendina."
+    exit 1
+fi
+
+arv=$1
+
+if ! [[ "$arv" =~ ^-?[0-9]+$ ]]; then
+    echo "Sisestatud väärtus ei ole täisarv."
+    exit 1
+fi
+
+if [ $((arv % 2)) -eq 0 ]; then
+    echo "Antud arv on paaris"
+else
+    echo "Antud arv on paaritu"
+fi
