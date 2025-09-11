@@ -1,0 +1,9 @@
+#!/bin/bash
+ 
+read -p "Sisesta suvaline täisarv: "
+
+if  (( arv % 2 == 0 )); then
+       echo "antud arv on paaris"
+else
+       echo "antud arv on paaritu"
+fi
