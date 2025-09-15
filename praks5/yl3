@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo -e "sisesta aja vaartus: \c"
+read aeg
+
+if test $aeg -ge 6 -a $aeg -lt 12 
+then 
+    echo "tere hommikust!"
+elif test $aeg -ge 12 -a $aeg -lt 18
+then
+    echo "tere päevast!"
+elif test $aeg -ge 18 -a $aeg -lt 22
+then
+    echo "tere õhtust!"
+elif test $aeg -ge 22 -a $aeg -lt 24
+then
+    echo "head ood!"
+else 
+    echo "vale sisend"
+fi

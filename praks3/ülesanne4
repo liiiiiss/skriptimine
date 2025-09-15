@@ -1,0 +1,22 @@
+#!/bin/bash
+# Autor: liis
+# Kirjeldus: Skript arvutab vajaliku busside arvu ja kontrollib, kas on vaja lisabussi.
+
+echo -n "Sisesta reisijate arv: "
+read reisijad
+echo -n "Sisesta kohtade arv ühes bussis: "
+read kohad
+
+# Arvutame täisbussid ja ülejäänud reisijad
+tais_bussid=$(expr $reisijad / $kohad)
+ulejaanud=$(expr $reisijad % $kohad)
+
+# Kui on ülejäänud reisijaid, suurenda busside arvu ühe võrra
+if [ $ulejaanud -gt 0 ]; then
+    bussid=$(expr $tais_bussid + 1)
+else
+    bussid=$tais_bussid
+fi
+
+echo "Kokku on vaja $bussid bussi"
+

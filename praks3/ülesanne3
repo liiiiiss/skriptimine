@@ -1,0 +1,20 @@
+#!/bin/bash
+# Autor: Liis
+# Kuupäev: 08.09.2025
+# Kirjeldus: Arvutab nädalase ajakulu ilma bc käsuta
+
+# Küsi sisendid
+echo -n "Sisestage ainepunktide arv: "
+read ainepunktid
+
+echo -n "Sisestage nädalate arv: "
+read nadalad
+
+# Kogu ajakulu (1 EAP = 26h)
+kokku=$((ainepunktid * 26))
+
+# Ümarda ülespoole (trikk: lisa nimetajale -1 enne jagamist)
+nadal_kulu=$(((kokku + nadalad - 1) / nadalad))
+
+# Väljasta tulemus
+echo "Ühe nädala eeldatav ajakulu on $nadal_kulu tundi"
