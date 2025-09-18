@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo -n "Sisesta kataloogi nimi, millest backup teha: "
+read kataloog
+
+if [ ! -d "$kataloog" ]; then
+    echo "Kataloogi $kataloog ei eksisteeri!"
+    exit 1
+fi
+
+
+mkdir -p ./backup
+
+
+katalooginimi=$(basename "$kataloog")
+
+
+kuupaev=$(date +%d%b%Y | tr '[:upper:]' '[:lower:]')
+
+
+tar -czf ./backup/${katalooginimi}.backup.${kuupaev}.tar.gz "$kataloog"
+
+echo "Kataloog $kataloog on varundatud."
+echo "Varukoopia faili nimi on: ${katalooginimi}.backup.${kuupaev}.tar.gz"
+echo "Fail asub kataloogis: ./backup/"

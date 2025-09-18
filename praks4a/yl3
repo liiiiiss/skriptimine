@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ ! -d "./test" ]; then
+    echo "Kataloogi ./test ei eksisteeri! Loo see enne skripti käivitamist."
+    exit 1
+fi
+
+mkdir -p ./backup
+
+tar -czf ./backup/test.backup.tar.gz ./test
+
+echo "Kataloog ./test on varundatud."
+echo "Varukoopia faili nimi on: test.backup.tar.gz"
+echo "Fail asub kataloogis: ./backup/"
