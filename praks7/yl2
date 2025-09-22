@@ -1,0 +1,15 @@
+#!/bin/bash
+# Skript väljastab ristküliku vastavalt kasutaja sisendile
+
+echo -n "Sisesta ridade arv: "
+read readArv
+echo -n "Sisesta tärnide arv reas: "
+read tarnid
+
+for ((i=1; i<=readArv; i++)); do
+    echo -n "$i. "
+    for ((j=1; j<=tarnid; j++)); do
+        echo -n "* "
+    done
+    echo ""
+done

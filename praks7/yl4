@@ -1,0 +1,13 @@
+#!/bin/bash
+# Skript väljastab kolmnurga, kus rea number määrab tärnide arvu
+
+echo -n "Sisesta ridade arv: "
+read readArv
+
+for ((i=1; i<=readArv; i++)); do
+    echo -n "$i. "
+    for ((j=1; j<=i; j++)); do
+        echo -n "* "
+    done
+    echo ""
+done

@@ -1,0 +1,19 @@
+#!/bin/bash
+# Skript väljastab õõnsa ruudu (servad tähed, seest tühjad)
+
+echo -n "Sisesta ridade arv: "
+read readArv
+echo -n "Sisesta tärnide arv reas: "
+read tarnid
+
+for ((i=1; i<=readArv; i++)); do
+    echo -n "$i. "
+    for ((j=1; j<=tarnid; j++)); do
+        if (( i==1 || i==readArv || j==1 || j==tarnid )); then
+            echo -n "* "
+        else
+            echo -n "  "
+        fi
+    done
+    echo ""
+done

@@ -1,0 +1,17 @@
+#!/bin/bash
+# Skript väljastab diagonaalse mustri 'o' ja '*'
+
+echo -n "Sisesta ridade arv: "
+read readArv
+
+for ((i=1; i<=readArv; i++)); do
+    echo -n "$i. "
+    for ((j=1; j<=readArv; j++)); do
+        if (( j < readArv - i + 1 )); then
+            echo -n "o "
+        else
+            echo -n "* "
+        fi
+    done
+    echo ""
+done
