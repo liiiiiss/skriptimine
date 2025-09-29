@@ -1,0 +1,32 @@
+#!/bin/bash
+# Autor: [Liis-Mirell]
+# Fail: menu
+# Kirjeldus: Skript kuvab menüü ja väljastab kasutaja valiku kohta info.
+
+# Menüü väljastamine
+echo "Vali oma söök:"
+echo "1) liha ja kartulid"
+echo "2) kala ja krõpsud"
+echo "3) supp ja salat"
+
+# Kasutaja sisend
+read -p "Tee oma valik (1 või 2 või 3): " valik
+
+# Kontrollime valikut ja väljastame vastuse
+case $valik in
+  1)
+    echo "Väga maitsev, aga jälgi oma tervist!"
+    echo "Head isu!"
+    ;;
+  2)
+    echo "Brititoit on maitsev!"
+    echo "Head isu!"
+    ;;
+  3)
+    echo "Nii tervislik ja igav..."
+    echo "Head isu!"
+    ;;
+  *)
+    echo "Vigane valik, proovi uuesti!"
+    ;;
+esac

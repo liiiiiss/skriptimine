@@ -1,0 +1,12 @@
+#!/bin/bash
+# Autor: [Sinu Nimi]
+# Fail: info
+# Kirjeldus: Skript tervitab sisselogitud kasutajat ja väljastab kuupäeva ning kellaaja.
+
+kasutaja=$USER
+echo "Tere, $kasutaja!"
+
+kuupaev=$(date +"%d.%m.%Y")
+aeg=$(date +"%H:%M")
+echo "Täna on $kuupaev kell $aeg"
+

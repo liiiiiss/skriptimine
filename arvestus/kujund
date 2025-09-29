@@ -1,0 +1,17 @@
+#!/bin/bash
+# Autor: [Liis-Mirell]
+# Fail: kujund
+# Kirjeldus: Skript küsib kasutajalt ridade arvu ja trükib väheneva kujundi.
+
+# Küsi kasutajalt ridade arv
+read -p "Sisesta ridade arv: " read_count
+
+# Trüki kujund
+for (( i=$read_count; i>0; i-- ))
+do
+  for (( j=1; j<=i; j++ ))
+  do
+    echo -n "* "
+  done
+  echo ""  # reavahetus
+done
